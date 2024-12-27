@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+  
+.background{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.background :nth-child(1) {
+  width: 250%;
+    height: 70vh;
+    position: absolute;
+    z-index: -2;
+    background-repeat: repeat-x;
+    object-fit: cover;
+animation: background 70s linear infinite;
+}
+
+@keyframes background{
+  0% {transform: translateX(-800px);}
+  100% {transform: translateX(-3400px);}
+}
+  
+.background :nth-child(2) {
+  width: 200%;
+    height: 30vh;
+    position: absolute;
+    z-index: -2;
+    /* display: block; */
+    background-repeat: repeat-x;
+    margin-top: 70vh;
+    filter: brightness(200px);
+    object-fit: cover;
+animation: background 70s linear infinite;
+}
+
+@keyframes background{
+  0% {transform: translateX(-800px);}
+  100% {transform: translateX(-3400px);}
+}
+
+.cycle{
+    width: 60vw;
+    height: 90vh;
+    position: absolute;
+display: flex;
+justify-content: center;
+    /* border: 3px black solid; */
+    flex-flow: row wrap;
+    margin-bottom: 0vh;
+    /* background-repeat: repeat-x; */
+    animation: cycleflow 20s linear  infinite  ;
+}
+
+@keyframes cycleflow{
+  0%  {transform: translateX(-1500px);}
+  50% {transform: translateX(10px);}
+  60% {transform: translateX(10px);}
+  90% {transform: translateX(10px);}
+  100%  {transform: translateX(2000px);}
+  }
+
+
+.body {
+    width: 40vw;
+    height: 88vh;
+    display: flex;
+    justify-content: space-around;
+    /* border: 3px black solid; */
+    flex-flow: row wrap;
+    margin-top: -34vh;
+
+}
+.body img{
+    width: 61vw;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    z-index: 2;
+    margin-top: -2vh;
+    position: absolute;
+    margin-left: 5vw;
+    transform: rotate(5deg);
+}
+
+@keyframes cycle{
+
+  100%{transform: translateY(-4px);}
+  50%{transform: translateY(4px);}
+  0%{transform: translateY(-4px);}
+  }
+
+ .shockupber{
+  height: 42vh;
+width: 40vw;
+/* border: 3px black solid; */
+display: flex;
+justify-content: center;
+margin-top: 34vh;
+position: absolute;
+/* transform: rotate(1deg); */
+z-index: 1;
+animation: cycle 2s linear  infinite  ;
+
+}
+
+.sit{
+  width: 90px;
+  height: 50px;
+  border-radius: 20px 50% 50% 20px;
+  background-color: red;
+  position: absolute;
+  margin-top: 3vh;
+  margin-right: 15vw;
+  z-index: -1;
+}
+
+.handleone{
+  width: 0.8vw;
+  height: 4vh;
+  background-color: black;
+ margin-left: 20.5vw;
+ position: absolute;
+ margin-top: 6vh;
+ border-radius: 0px 0px 20px 20px;
+} 
+
+.handletwo{
+  width: 7vw;
+  height: 3vh;
+  background-color: black;
+ margin-left: 19.3vw;
+ position: absolute;
+ transform: rotateY(30deg);
+ margin-top: 4vh;
+ border-radius: 0px 0px 20px 20px;
+} 
+
+.shockupberleft{
+  width: 1vw;
+  height: 27vh;
+  background-color: black;
+  transform: skew(150deg);
+ margin-right: 22vw;
+ position: absolute;
+ margin-top: 9.6vh;
+} 
+
+.toptube{
+  width: 18vw;
+  height: 1.5vh;
+  background-color: black;
+  transform: skew(200deg);
+ margin-left: 3vw;
+ margin-top: 10vh;
+ transform: rotate(2deg);
+ position: absolute;
+}
+
+.seattube{
+  width: 1vw;
+  height: 33vh;
+  background-color: black;
+  transform: skew(200deg);
+ margin-right: 9.8vw;
+ margin-top: 6vh;
+ position: absolute;
+ z-index: -2;
+}
+
+.shockupberright{
+  width: 0.9vw;
+  height: 26vh;
+  background-color: black;
+  transform: skew(200deg);
+ margin-left: 25vw;
+ margin-top: 9vh;
+ position: absolute;
+ border-radius: 30px;
+}
+  
+.downtube{
+  width: 1vw;
+  height: 28vh;
+  background-color: black;
+  transform: skew(138deg);
+ margin-left: 9vw;
+ position: absolute;
+ margin-top: 11.7vh;
+}
+
+.chainstays{
+  width: 13vw;
+  height: 1.2vh;
+  background-color: black;
+  transform: skew(200deg);
+ margin-right: 16vw;
+ margin-top: 37.5vh;
+ transform: rotate(5deg);
+ position: absolute;
+}
+
+.gearback{
+  width: 3vw;
+  height: 6vh;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 36vh;
+  margin-right: 4vw;
+  border: black solid 20px;
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+  box-shadow:  0px 0px 10px 10px #fff;
+  z-index: -1;
+  animation: spin 7s linear infinite; 
+  transform: rotate(30deg);
+}
+
+.gearfront{
+  width: 3vw;
+  height: 6vh;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 36vh;
+  margin-right: 4vw;
+  border: black solid 20px;
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+  box-shadow:  0px 0px 10px 10px #fff;
+  z-index: 1;
+  transform: rotate(30deg);
+
+  animation: spin 7s linear infinite; 
+}
+
+.wheel{
+    width: 60vw;
+    height: 25vh;
+    display: flex;
+    justify-content: space-around;
+    /* border: 3px black solid; */
+    flex-flow: row wrap;
+    margin-top: 56vh;
+
+}
+
+  .leftwheel{
+    width: 260px;
+    height: 260px;
+    border: 60px solid #fff; 
+    border-radius: 50%;
+    border-top-color: green; 
+    animation: spin 4s linear infinite;
+    border-bottom-color: green;
+    outline-color: yellow;
+    box-shadow:  0px 0px 15px 10px black , inset 0px 0px 5px 4px rgb(87, 87, 1);
+  }
+
+.leftwheel  .innerwheel{
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: black ;
+    border-radius: 50%;
+margin: 50px 50px 50px 50px;
+  }
+
+  .rightwheel {
+    width: 260px;
+    height: 260px;
+    border: 60px solid #fff; 
+    border-radius: 50%;
+    border-top-color: green; 
+    border-bottom-color: green;
+    box-shadow:  0px 0px 15px 10px black , inset 0px 0px 5px 4px rgb(87, 87, 1);
+    animation: spin 4s linear infinite; 
+      }
+
+      .rightwheel .innerwheel{
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background-color: black ;
+        border-radius: 50%;
+    margin: 50px 50px 50px 50px;
+      }
+
+
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .mainlogin{
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    position: absolute;
+  }
+  
+
+  .login a{
+    position: absolute;
+    width:5vw;
+    height: 3vh;
+    text-decoration: none;
+    font-family:'Times New Roman';
+    font-size: 1.5vw;
+    z-index: 2;
+    margin-top: 1.8vh;
+font-weight: bolder;
+    margin-left: 50vw;
+   color: black;
+  filter: drop-shadow(1px 2px 30px white);
+  filter: drop-shadow(0px 2px 2px 20px yellow);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
